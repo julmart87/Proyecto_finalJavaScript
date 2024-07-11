@@ -1,4 +1,4 @@
-    const marcarCarrito = () => {
+const marcarCarrito = () => {
     modalContainer.innerHTML = "";
     modalContainer.style.display = "flex";
     const modalHeader = document.createElement("div");
@@ -47,6 +47,7 @@
     totalCompra.innerHTML = `El total de la compra es: $ ${total} dolares!`;
     totalCompra.style.fontFamily = "Play";
     modalContainer.append(totalCompra);
+    
 
     const finalizarCompra = document.createElement("button");
     finalizarCompra.className = "final-content";
@@ -54,6 +55,19 @@
     finalizarCompra.style.fontFamily = "play";
     finalizarCompra.style.fontSize = "1rem";
     modalContainer.append(finalizarCompra);
+
+    finalizarCompra.addEventListener("click", () => {
+        Swal.fire({
+            title: "Compra Finalizada",
+            text: "Su compra fue un exito",
+            icon: "success"
+        });
+        carrito = [];
+        carritoContador();
+        save();
+        modalContainer.style.display = "none";
+        modalContainer.style.innerHTML = "";
+    });
 };
 
 verCarrito.addEventListener("click", marcarCarrito);
