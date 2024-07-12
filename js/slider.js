@@ -27,14 +27,13 @@ const sliderI = document.querySelector('.slider');
 function nextSlide() {
     currentIndex = (currentIndex + 1) % totalSlides;
     updateSlider();
-}
+};
 
 
 function updateSlider() {
     const offset = currentIndex * slides[0].clientWidth * -1;
     sliderI.style.transform = `translateX(${offset}px)`;
-}
-
+};
 
 setInterval(nextSlide, 3000);
 

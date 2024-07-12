@@ -9,7 +9,7 @@ body {
     background-color: rgb(231, 231, 222);
 }
 
-h1 {
+.banner-container h1 {
     padding-top: 15rem;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -18,7 +18,7 @@ h1 {
     font-style: normal;
 }
 
-h2 {
+.banner-container h2 {
     text-align: center;
 }
 
@@ -75,7 +75,7 @@ h2 {
     cursor: pointer;
 }
 
-/* Contador de carrito */
+/** Contador de carrito */
 .cantidad-carrito {
     background-color: rgb(201, 46, 46);
     color: rgb(255, 255, 255);
@@ -163,7 +163,6 @@ footer p {
 }
 
 /** Estilos del Shop */
-
 .shop-content {
     display: flex;
     flex-wrap: wrap;
@@ -177,7 +176,7 @@ footer p {
     background-color: #f0f0f0;
     padding: 20px;
     border-radius: 8px;
-    width: calc(25% - 100px); /* Ancho de cada producto para cuatro columnas */
+    width: calc(25% - 100px); 
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center; 
 }
@@ -216,9 +215,7 @@ footer p {
 }
 
 .class-comprar {
-    /* background-color: #0f68c6da; */
     background-color: rgb(222, 211, 70);
-    /* color: #fff; */
     color: #0f0e0e;
     border: none;
     padding: 8px 16px;
@@ -228,13 +225,11 @@ footer p {
 }
 
 .class-comprar:hover {
-    /* background-color: #0056b3; */
     background-color: rgb(170, 163, 53);
     color: #ccc;
 }
 
 /** Estilos del Modal (carrito)*/
-
 .modal-container {
     width: 80%;
     margin: 0 10%;
@@ -262,6 +257,7 @@ footer p {
     background-color: #5f3a3ae8;
     color: #fff;
     width: 100%;
+    font-family: "play";
 }
 
 .modal-header-title {
@@ -298,11 +294,11 @@ footer p {
     padding-top: 20px;
 }
 
-/* Boton de borrar producto */
+/** Boton borrar producto */
 .delete-product {
     cursor: pointer;
 }
-
+/** Boton finalizar compra */
 .final-content {
     background-color: rgb(222, 211, 70);
     color: #0f0e0e;
@@ -319,53 +315,20 @@ footer p {
 }
 
 
-
-
-
-
-
-
-
 /** Estilos del About Us */
-
 .about-container {
     height: 60rem;
-    margin-top: 20px;
+    margin-top: 10px;
     padding-top: 100px;
 }
 
 /** Estilos del slider */
-/* .slider {
-    overflow: hidden;
-    width: 50%;
-    margin-left: 25%;
-}
-.slider-inner {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    transition: all 0.3s ease-in;
-    align-items: center;
-}
-.slider-inner img {
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    height: 500px;
-    width: 100%; 
-    object-fit: cover;
-    
-}  */
-
-
-
 .slider-div {
     height: 60rem;
     margin-top: 20px;
     padding-top: 100px;
 }
 .slider-container {
-    /* position: relative; */
-    /* width: 100%; */
     overflow: hidden;
 }
 
@@ -385,8 +348,53 @@ footer p {
     border-radius: 10px;
 }
 
+/** Estilos de lista */
+.list-container {
+    height: 60rem; 
+    margin-top: 10px; 
+    padding-top: 100px; 
+    display: flex;
+    flex-direction: column;  
+    justify-content: center; 
+    box-sizing: border-box;
+    background-color: #494848; 
+}
+
+.list-container h2 {
+    font-family: "play";
+    text-align: center;
+    font-size: 24px; 
+    color: white; 
+}
+.list-container h3 {
+    font-family: "play";
+    text-align: center;
+    color: white; 
+}
 
 
+#user-list {
+    margin-left: 35%;
+    width: 100%; 
+    list-style-type: none; 
+    padding: 50px 0 0 0;
+    max-width: 600px; 
+}
+
+#user-list li {
+    font-family: "play";
+    background-color: #f2f2f2; 
+    border-radius: 8px; 
+    padding: 15px; 
+    margin-bottom: 10px; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; 
+}
+
+#user-list li:hover {
+    transform: translateY(-3px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
 
 /** Estilos de contacto */
 .contact-container {
@@ -464,7 +472,6 @@ input[type="submit"]:hover {
 .button-form:hover {
     background-color: #333;
 }
-
 
 /** Estilo para Sweet Alert */
 .swal2-styled {

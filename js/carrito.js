@@ -40,6 +40,7 @@ const marcarCarrito = () => {
         });
     });
 
+    
     const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
 
     const totalCompra = document.createElement("div");
